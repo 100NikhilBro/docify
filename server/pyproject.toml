@@ -1,0 +1,11 @@
+[project]
+name = "docify"
+version = "0.1.0"
+description = "Docify — Understand Your Documents Better"
+readme = "../Readme.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/100NikhilBro/docify"
+Repository = "https://github.com/100NikhilBro/docify"

@@ -1,0 +1,39 @@
+# Docify — root ignore (workspace may be published to GitHub as-is)
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+**/*.egg-info/
+**/dist/
+**/build/
+
+# Runtime data (local indexes, uploads, jobs)
+server/data/
+
+# Node / Next
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel/
+web/.clerk/
+**/*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs / diagnostics
+*.log
+**/npm-debug.log*
