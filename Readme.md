@@ -6,39 +6,24 @@ Docify is a multimodal Retrieval-Augmented Generation (RAG) application that let
 
 ---
 
-## Features
-
-- **Multimodal Document Processing** — Supports PDF, DOCX, PPTX, and YouTube transcripts.
-- **Hybrid Retrieval** — Combines dense vector search with BM25 lexical search.
-- **Query Understanding** — Rewrites questions and classifies intent for specialized handling.
-- **Reranking** — Uses Jina reranking to improve retrieved candidate relevance, with a fallback scoring path.
-- **Context Expansion** — Retrieves neighboring chunks to provide additional context.
-- **Streaming Responses** — Streams generated answers to the client.
-- **Source Citations** — Provides page or timestamp citations where supported.
-- **Authentication & Isolation** — Uses Clerk JWT authentication and user-scoped retrieval and file access.
-
----
-
 ## Architecture
 
 ![Docify Architecture](https://github.com/user-attachments/assets/58a23bd4-6f9b-4afe-a603-27c4ac7d06e2)
-
-
 
 ### Indexing Pipeline
 
 ```text
 PDF / DOCX / PPTX / YouTube
-              ↓
+             ↓
       Content Extraction
-              ↓
+             ↓
            Chunking
-              ↓
-      Embedding Generation
-              ↓
-        Qdrant Indexing
-              ↓
-       BM25 Index Reload
+             ↓
+     Embedding Generation
+             ↓
+       Qdrant Indexing
+             ↓
+      BM25 Index Reload
 ```
 
 ### Query Pipeline
@@ -62,12 +47,25 @@ Specialized Handler OR Hybrid Retrieval
                               ↓
                        Relevant Context
                               ↓
-                      Gemini Generation
+                     Gemini Generation
                               ↓
                       Streamed Response
 ```
 
 Specialized handlers support document summaries, aggregation, and comparisons. General questions use the hybrid retrieval pipeline.
+
+---
+
+## Features
+
+- **Multimodal Document Processing** — Supports PDF, DOCX, PPTX, and YouTube transcripts.
+- **Hybrid Retrieval** — Combines dense vector search with BM25 lexical search.
+- **Query Understanding** — Rewrites questions and classifies intent for specialized handling.
+- **Reranking** — Uses Jina reranking to improve candidate relevance, with a fallback scoring path.
+- **Context Expansion** — Retrieves neighboring chunks to provide additional context.
+- **Streaming Responses** — Streams generated answers to the client.
+- **Source Citations** — Provides page or timestamp citations where supported.
+- **Authentication & Isolation** — Uses Clerk JWT authentication and user-scoped retrieval and file access.
 
 ---
 
@@ -121,7 +119,6 @@ Create `server/.env`:
 ```env
 NODE_ENV=development
 GEMINI_API_KEY=
-
 JINA_API_KEY=
 
 QDRANT_URL=http://localhost:6333
@@ -207,7 +204,7 @@ npx tsc --noEmit
 
 ---
 
-## Scalability Note
+## Scalability Considerations
 
 The current implementation has single-instance limitations:
 
@@ -223,7 +220,6 @@ Horizontal scaling requires coordinated shared state and a durable distributed j
 
 **Nikhil Gupta**
 
-**Built & Improved by Nikhil Gupta**
+Built & Improved by **Nikhil Gupta**
 
 [GitHub](https://github.com/100NikhilBro)
-
