@@ -8,7 +8,9 @@ Docify is a multimodal Retrieval-Augmented Generation (RAG) application that let
 
 ## Architecture
 
-![Docify Architecture](https://github.com/user-attachments/assets/58a23bd4-6f9b-4afe-a603-27c4ac7d06e2)
+![Docify Architecture](https://github.com/user-attachments/assets/6e802a20-e5af-40b5-bcc0-2ed93270f9e9)
+
+
 
 ### Indexing Pipeline
 
