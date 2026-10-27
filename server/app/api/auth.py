@@ -57,7 +57,7 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
 
     token = credentials.credentials
 
-    # Handle mock tokens for unit testing / local verification (gated)
+    # Handle mock tokens for unit testing / local verification 
     if token == "invalid_mock_token":
         if not _mock_auth_allowed():
             raise _unauthorized("Mock authentication is disabled")
