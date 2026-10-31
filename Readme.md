@@ -4,13 +4,15 @@
 
 Docify is a multimodal Retrieval-Augmented Generation (RAG) application that lets users ask questions about PDFs, Word documents, PowerPoint presentations, and YouTube videos. It combines hybrid retrieval and LLM-based generation to provide relevant answers with page or timestamp citations.
 
+## Overview
+
+[Watch the Demo](https://github.com/user-attachments/assets/1a4c24ef-37f4-41d2-ab84-5e9272dee42f)
+
 ---
 
 ## Architecture
 
 ![Docify Architecture](https://github.com/user-attachments/assets/6e802a20-e5af-40b5-bcc0-2ed93270f9e9)
-
-
 
 ### Indexing Pipeline
 
@@ -38,20 +40,20 @@ Query Rewriting
 Intent Classification
     ↓
 Specialized Handler OR Hybrid Retrieval
-                              ↓
-                    Dense Search + BM25
-                              ↓
-                      Merge Candidates
-                              ↓
-                           Reranking
-                              ↓
-                    Parent-Window Expansion
-                              ↓
-                       Relevant Context
-                              ↓
-                     Gemini Generation
-                              ↓
-                      Streamed Response
+                            ↓
+                  Dense Search + BM25
+                            ↓
+                    Merge Candidates
+                            ↓
+                         Reranking
+                            ↓
+                  Parent-Window Expansion
+                            ↓
+                     Relevant Context
+                            ↓
+                   Gemini Generation
+                            ↓
+                    Streamed Response
 ```
 
 Specialized handlers support document summaries, aggregation, and comparisons. General questions use the hybrid retrieval pipeline.
@@ -96,6 +98,7 @@ Specialized handlers support document summaries, aggregation, and comparisons. G
 - Node.js and npm
 - Docker
 - Gemini API key
+- Jina API key
 - Clerk application credentials
 
 ### 1. Clone the Repository
@@ -221,7 +224,5 @@ Horizontal scaling requires coordinated shared state and a durable distributed j
 ## Author
 
 **Nikhil Gupta**
-
-Built & Improved by **Nikhil Gupta**
 
 [GitHub](https://github.com/100NikhilBro)
