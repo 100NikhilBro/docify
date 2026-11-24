@@ -6,7 +6,9 @@ Docify is a multimodal Retrieval-Augmented Generation (RAG) application that let
 
 ## Overview
 
-[Watch the Demo](https://github.com/user-attachments/assets/1a4c24ef-37f4-41d2-ab84-5e9272dee42f)
+
+[Watch the Demo](https://github.com/user-attachments/assets/14538c07-4069-43e7-a001-933b721cddb5)
+
 
 ---
 
