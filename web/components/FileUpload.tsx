@@ -30,7 +30,7 @@ const getApiBaseUrl = () => {
       "https://pdf-rag-wjgd.onrender.com"
     );
   }
-  return "http://localhost:8000";
+  return "http://localhost:7860";
 };
 
 const API_BASE = getApiBaseUrl();
@@ -786,3 +786,4 @@ export default function FileUpload({
     </div>
   );
 }
+
